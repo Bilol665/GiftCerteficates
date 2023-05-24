@@ -16,5 +16,8 @@ public class GiftNameNotTrueController extends ResponseEntityExceptionHandler {
     public ResponseEntity<Object> ex(GiftNotFoundException e) {
         return new ResponseEntity<>("Tag not found",HttpStatus.NOT_FOUND);
     }
-
+    @ExceptionHandler(value = NoGiftWithThisNameFoundException.class)
+    public ResponseEntity<Object> noGiftFound(NoGiftWithThisNameFoundException e) {
+        return new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+    }
 }

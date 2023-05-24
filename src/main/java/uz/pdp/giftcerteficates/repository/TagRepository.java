@@ -7,5 +7,6 @@ import java.util.UUID;
 import java.util.List;
 
 public interface TagRepository extends JpaRepository<Tag, UUID> {
-    Tag searchTagByNameContainsIgnoreCase(String tag_name);
+    Tag searchTagByNameContainsIgnoreCase(String tagName);
+    Tag findFirstByNameContainsIgnoreCase(String tagName);
 }

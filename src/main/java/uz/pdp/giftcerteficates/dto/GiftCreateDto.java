@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import uz.pdp.giftcerteficates.entity.Tag;
+
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,4 +17,5 @@ public class GiftCreateDto {
     private String description;
     private Double price;
     private Integer duration;
+    private List<Tag> tags;
 }
